@@ -1,0 +1,103 @@
+/* ALGEMEEN
+---------------------------------------------------- */
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+ body {
+    background-attachment: fixed;
+    background-image: url("../img/bg.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  body:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: -webkit-linear-gradient(0deg, lightgreen 0%, lightblue 100%);
+    opacity: 0.6;
+    z-index: -1;
+  }
+
+  h1 {
+      margin: 0;
+      text-align: center;
+    padding-top: 6%;
+}
+
+  .container {
+    max-width: 80%;
+    margin: 100px;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  
+/* OVER
+---------------------------------------------------- */
+
+.over {
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    background-image: url("../img/lode.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.over_tekst {
+  text-align: center;
+  margin-right: -50%;
+  padding-top: 6%;
+}
+
+/* PORTFOLIO 
+---------------------------------------------------- */
+
+.portfolio{
+    background: linear-gradient(0deg, lightgreen 0%, lightblue 90%);
+    height: 500px;
+    margin: 0 auto;
+}
+
+.gallery {
+    background-color: white;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+.responsive {
+    margin: 0 auto;
+    float: left;
+    width: 25%;
+}
+
+/* CLEARFIX
+---------------------------------------------------- */
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+  
+  
