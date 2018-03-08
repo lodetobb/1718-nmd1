@@ -1,3 +1,28 @@
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #6C7466;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background-color: rgb(78, 85, 73);
+}
+
 .header .profile-img {
     position: absolute;
     z-index: -1;
@@ -7,7 +32,6 @@
     background-size: cover;
     background-position: center top;
 }
-
 
 .header .info {
     text-align: center;
@@ -77,7 +101,7 @@
 
 .section-title h2 {
     margin-bottom: 5px;
-    color: #bebece;
+    color:  rgb(78, 85, 73);
 }
 
     
@@ -149,3 +173,58 @@
 
 /*  PORTFOLIO
 -------------------------------------- */
+
+
+.portcontainer {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+  }
+  
+  /* Make the image to responsive */
+  .image {
+    display: block;
+    height: 300px;
+  }
+  
+  /* The overlay effect - lays on top of the container and over the image */
+  .overlay {
+    position: absolute;  
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1; 
+    width: 86.5%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* When you mouse over the container, fade in the overlay title */
+  .portcontainer:hover .overlay {
+    opacity: 1;
+  }
+
+  /* TERUG KNOP
+---------------------------------------------------- */
+
+.back-to-top {
+    display:none;
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: white;
+    background-color: #6C7466;
+    font-size: 20px;
+    padding: 1em;
+    margin-right: 40px;
+ }
+ 
+ .back-to-top:hover {   
+    background-color: rgb(78, 85, 73);
+    text-decoration:none;
+    color:#ffffff;
+ }

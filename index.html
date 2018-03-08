@@ -4,7 +4,7 @@
  		  <!-- BASIS
           –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		  <meta charset="utf-8">
-		  <title>lodetobb - cv</title>
+		  <title>Lode Tobback</title>
 		  <meta name="description" content="Lode Tobback">
 		  <meta name="author" content="Lode Tobback"><meta name="Keywords" content="lode tobback" />
 		  <meta name="Description" content="" />
@@ -20,7 +20,8 @@
       <link href="css/style.css" rel="stylesheet">
   
 		  <!-- SCRIPT
-		   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+           –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+           <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -45,12 +46,25 @@
 
         <div class="right-col-block blocks">
 
+         <!-- NAV
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+                <div class="nav">
+                        <ul>
+                            <li><a href="#over">Personalia</a></li>
+                            <li><a href="#opleiding">Opleidingen</a></li>
+                            <li><a href="#vaardigheden">Vaardigheden</a></li>
+                            <li><a href="#ervaringen">Werkervaring</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                          </ul>
+                    </div>
+
         <!-- PERSONALIA
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
             <section class="intro section-wrapper">
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row" id="over">
                         <div class="col-md-12">
                             <div class="section-title">
                                 <h2>Personalia</h2>
@@ -78,7 +92,7 @@
 
             <section class="expertise-wrapper section-wrapper gray-bg">
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row" id="opleiding">
                         <div class="col-md-12">
                             <div class="section-title">
                                 <h2>Opleidingen</h2>
@@ -125,7 +139,7 @@
             
             <section class="section-wrapper skills-wrapper">
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row" id="vaardigheden">
                         <div class="col-md-12">
                             <div class="section-title">
                                 <h2>Vaardigheden</h2>
@@ -220,7 +234,7 @@
             
             <section class="section-wrapper section-experience gray-bg">
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row" id="ervaringen">
                         <div class="col-md-12">
                             <div class="section-title"><h2>Werkervaring</h2></div>
                         </div>
@@ -250,7 +264,7 @@
             
             <section class="section-wrapper section-education">
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row" id="portfolio">
                         <div class="col-md-12">
                             <div class="section-title"><h2>Portfolio</h2></div>
                         </div>
@@ -258,10 +272,12 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            
 
-                           
-
+                                <div class="portcontainer">
+                                        <a href="img/lode.jpg" download="taak">
+                                        <img src="img/lode.jpg" class="image">
+                                        <div class="overlay">Naam Taak</div></a>
+                                 </div>
                         </div>
                     </div>
                 </div>
@@ -271,5 +287,64 @@
             </div>
         </div>
     </div>
+
+     <!-- Terug knop -->
+<a href="#" class="back-to-top">&#8593;</a>
+<script>
+  jQuery(document).ready(function() {
+  var offset = 220;
+  var duration = 500;
+  jQuery(window).scroll(function() {
+  if (jQuery(this).scrollTop() > offset) {
+  jQuery('.back-to-top').fadeIn(duration);
+  } else {
+  jQuery('.back-to-top').fadeOut(duration);}
+  });
+  jQuery('.back-to-top').click(function(event) {
+  event.preventDefault();
+  jQuery('html, body').animate({scrollTop: 0}, duration);
+  return false;
+  })
+  });
+</script>
+  <!-- smoothscroll -->
+<script>
+  // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
 </body>
 </html>
