@@ -1,103 +1,151 @@
-/* ALGEMEEN
----------------------------------------------------- */
-
-html{
-    font-family: Arial, Helvetica, sans-serif;
-}
- 
- body {
-    background-attachment: fixed;
-    background-image: url("../img/bg.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  
-  body:after {
+.header .profile-img {
     position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
+    z-index: -1;
     width: 100%;
     height: 100%;
-    position: fixed;
-    background-image: -webkit-linear-gradient(0deg, lightgreen 0%, lightblue 100%);
-    opacity: 0.6;
-    z-index: -1;
-  }
-
-  h1 {
-      margin: 0;
-      text-align: center;
-    padding-top: 6%;
+    background-image: url(../img/lode.jpg);
+    background-size: cover;
+    background-position: center top;
 }
 
-  .container {
-    max-width: 80%;
-    margin: 100px;
-    background-color: white;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-  }
-  
-/* OVER
----------------------------------------------------- */
 
-.over {
-    width: 100%;
-    height: 500px;
-    margin: 0;
-    background-image: url("../img/lode.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.over_tekst {
-  text-align: center;
-  margin-right: -50%;
-  padding-top: 6%;
-}
-
-/* PORTFOLIO 
----------------------------------------------------- */
-
-.portfolio{
-    background: linear-gradient(0deg, lightgreen 0%, lightblue 90%);
-    height: 500px;
-    margin: 0 auto;
-}
-
-.gallery {
-    background-color: white;
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-.desc {
-    padding: 15px;
+.header .info {
     text-align: center;
-}
-
-
-.responsive {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     margin: 0 auto;
-    float: left;
-    width: 25%;
+    padding: 10%;
 }
 
-/* CLEARFIX
----------------------------------------------------- */
+.info h1 {
+    font-size: 36px;
+    color: #ffffff;
+    line-height: 1;
+    margin: 0;
+}
 
-.clearfix:after {
+.info p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.columns-block {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.left-col-block {
+    width: 50%;
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+}
+
+.right-col-block {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.23);
+}
+
+.gray-bg {
+    background-color: #f9f9f9;
+}
+
+/*  WRAPPER
+-------------------------------------- */
+
+#main-wrapper {
+    background: #ffffff;
+}
+
+.section-wrapper {
+    padding: 50px;
+}
+
+/*  TITLE
+-------------------------------------- */
+.section-title {
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    margin-bottom: 5px;
+    color: #bebece;
+}
+
+    
+/*  HEADER
+-------------------------------------- */
+
+.header {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    vertical-align: middle;
+    position: relative;
+}
+
+.header .profile-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/lode.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+
+
+
+/*  SKILLS
+-------------------------------------- */
+
+.progress-item {
+    position: relative;
+}
+
+.progress-item .progress-title {
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.progress-item .progress {
+    height: 4px;
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+.progress-item .progress-bar {
+    background-color: #6C7466;
+    box-shadow: none;
+    text-align: right;
+}
+
+.progress-item .progress-percent {
+    font-size: 10px;
+    background-color: #313131;
+    position: absolute;
+    top: 5px;
+    padding: 0 8px;
+    border-radius: 3px;
+}
+
+.progress-item .progress-percent::before {
     content: "";
-    display: table;
-    clear: both;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    border-top: 6px solid #313131;
+    border-right: 8px solid transparent;
 }
-  
-  
-  
+
+/*  PORTFOLIO
+-------------------------------------- */
