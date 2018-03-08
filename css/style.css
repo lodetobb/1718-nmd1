@@ -153,7 +153,7 @@
 }
 
 .progress-item .progress-bar {
-    background-color: #6C7466;
+    background-color: #F1DC5C;
     box-shadow: none;
     text-align: right;
 }
@@ -223,7 +223,7 @@
  }
  
  .back-to-top:hover {   
-    background-color: rgb(78, 85, 73);
+    background-color: #F1DC5C;
     text-decoration:none;
     color:#ffffff;
  }
