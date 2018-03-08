@@ -160,21 +160,15 @@
 
 .progress-item .progress-percent {
     font-size: 10px;
-    background-color: #313131;
     position: absolute;
     top: 5px;
     padding: 0 8px;
     border-radius: 3px;
+    color: black;
+    font-weight: 500;
 }
 
-.progress-item .progress-percent::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    border-top: 6px solid #313131;
-    border-right: 8px solid transparent;
-}
+
 
 /*  PORTFOLIO
 -------------------------------------- */
